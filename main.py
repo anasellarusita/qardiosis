@@ -55,7 +55,7 @@ UPLOAD_FOLDER = os.path.join(path, 'testing/testing2/patient071')
 
 # # Make directory if uploads is not exists
 if not os.path.isdir(UPLOAD_FOLDER):
-    os.mkdir(UPLOAD_FOLDER)
+    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
     
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
